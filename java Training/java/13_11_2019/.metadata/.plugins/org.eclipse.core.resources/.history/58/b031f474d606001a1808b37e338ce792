@@ -1,9 +1,0 @@
-package com.fileserialization;
-
-public class FileOpeartion {
-
-	void serialiazeObject(Dog dog)
-	{
-		
-	}
-}

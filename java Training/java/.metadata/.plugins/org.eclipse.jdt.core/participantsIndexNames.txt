@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Allianz\Desktop\java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2994586096.index
-\FindCategoryClientClient\src

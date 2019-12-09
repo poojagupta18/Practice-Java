@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Users\Allianz\Desktop\java\Login_Servlet\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3716196928.index
-3265349219.index
-4074902265.index
-1303581070.index
-1684264620.index
-3116238881.index
-1671363478.index

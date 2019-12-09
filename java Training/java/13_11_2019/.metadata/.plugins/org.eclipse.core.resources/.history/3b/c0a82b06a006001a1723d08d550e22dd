@@ -1,7 +1,0 @@
-package com.crunchify.restjersey;
-
-@Path("/ctofservice")
-public class CtoFService {
-
-	
-}

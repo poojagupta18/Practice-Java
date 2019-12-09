@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Users\Allianz\Desktop\java\OnlineShopping\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3372366508.index
-717668501.index
-80160218.index
-3896547715.index
-1200483266.index
-3616924209.index
-2294433479.index
