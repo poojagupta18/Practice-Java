@@ -1,0 +1,10 @@
+package com.allianz.shopping.dao;
+
+public class ProductDAO {
+	
+	public boolean addProduct()
+	{
+		
+	}
+
+}

@@ -1,0 +1,105 @@
+package com.interview.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.interview.dao.Assementdao;
+import com.interview.pojo.Assesment;
+import com.interview.utility.DBUtilityConnection;
+
+public class AssesmentDaoImpl implements Assementdao {
+
+	@Override
+	public boolean insertAssesmentInformation(Assesment Assesment) {
+		boolean status = false;
+		 Connection con=null;
+		  try {
+			  String sql="Insert into candidateassessment(candidate_id, technical_one_id, technical_two_id, hr_round_id) values(?,?,?,?)";
+				PreparedStatement psmt=con.prepareStatement(sql);
+				//psmt.setInt(1,Assesment.getCandidateAssessmentId());
+				psmt.setInt(1,Assesment.getCandidateId());
+				psmt.setInt(2,Assesment.getTechnicalOneId());
+				psmt.setInt(3,Assesment.getTechnicalTwoId());
+				psmt.setInt(4,Assesment.getHrRoundId());
+				int no=psmt.executeUpdate();
+				
+				
+				if(no>0)
+				{
+					status = true;
+				}
+				
+            }catch(Exception e)
+		  {
+			  e.printStackTrace();
+		  }
+		  return status;
+	}
+			
+
+
+
+	@Override
+	public List<Assesment> getAll(Integer candidateAssessmentId) {
+		 Connection con=null;
+       try {
+    	   List<Assesment>AssesmentList = new ArrayList<Assesment>();
+    	   con=DBUtilityConnection.getConnection();
+			String sql="select * from candidateassessment";
+			PreparedStatement psmt=con.prepareStatement(sql);
+			ResultSet rs=psmt.executeQuery();
+			while(rs.next()) {
+				Assesment Assesment=new Assesment();
+				Assesment.setCandidateAssessmentId(rs.getInt("candidate_assessment_id "));
+				Assesment.setCandidateId(rs.getInt("candidate_id "));
+				Assesment.setTechnicalOneId(rs.getInt("technical_one_id "));
+				Assesment.setTechnicalTwoId(rs.getInt("technical_two_id "));
+				Assesment.setHrRoundId(rs.getInt("hr_round_id "));
+				AssesmentList.add(Assesment);
+				}
+			return AssesmentList;
+	}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+
+	@Override
+	public Assesment getCandidateById(Integer candidateId) {
+		try {
+			String sql = "select * from candidateassessment where candidate_id=? ";
+			Connection conn = DBUtilityConnection.getConnection();
+			Assesment assesment = null;
+			
+			PreparedStatement preStatement = conn.prepareStatement(sql);
+			preStatement.setInt(1, candidateId);
+			ResultSet rs = preStatement.executeQuery();
+			
+			if(rs.next()) {
+				assesment = new Assesment();
+				assesment.setCandidateAssessmentId((rs.getInt("candidate_assessment_id ")));
+				assesment.setCandidateId(rs.getInt("candidate_id "));
+				assesment.setTechnicalOneId((rs.getInt("technical_one_id ")));
+				assesment.setTechnicalTwoId(rs.getInt("technical_two_id "));
+				assesment.setHrRoundId((rs.getInt("hr_round_id ")));
+				
+			}
+
+			System.out.println(assesment);
+			return assesment; 
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+		
+		return null;
+		
+	}
+
+}

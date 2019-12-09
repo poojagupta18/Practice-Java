@@ -1,0 +1,16 @@
+package com.fileserialization;
+
+import com.pojo.Dog;
+
+public class FileOpeartion {
+
+	void serialiazeObject(Dog dog)
+	{
+		
+	}
+	
+	void deserizedObject()
+	{
+		
+	}
+}

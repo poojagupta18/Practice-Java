@@ -1,0 +1,14 @@
+package com.interview.dao;
+
+import java.util.List;
+
+import com.interview.pojo.HrRound;
+
+public interface HrRoundDao {
+
+	boolean insertHrRoundInformation(HrRound hrRound);
+	
+	List<HrRound> getAllHrRoundInformation();
+	
+	HrRound getHrRoundInformationByCandidateId(int candidateId);
+}

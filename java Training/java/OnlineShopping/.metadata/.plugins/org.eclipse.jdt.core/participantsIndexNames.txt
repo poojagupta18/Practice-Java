@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+C:\Users\Allianz\Desktop\java\OnlineShopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\689252466.index
+\OnlineShopping\src
+C:\Users\Allianz\Desktop\java\OnlineShopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3896547715.index
+\OnlineShopping\src
+C:\Users\Allianz\Desktop\java\OnlineShopping\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2419133961.index
+\OnlineShopping\src

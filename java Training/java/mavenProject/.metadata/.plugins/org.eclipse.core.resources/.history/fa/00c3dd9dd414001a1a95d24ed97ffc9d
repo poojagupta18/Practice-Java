@@ -1,0 +1,29 @@
+package com.apachecamel.example;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.RoutesBuilder;
+import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.impl.DefaultCamelContext;
+
+public class FileProcessorCamel  {
+
+	CamelContext context = new DefaultCamelContext();
+
+	//FileProcessor router = new FileProcessor();
+	
+	
+	context.addRoutes(new RouteBuilder()
+	{
+		@Override
+		public void configure() throws Exception {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	});
+	
+	
+	
+	
+	
+}

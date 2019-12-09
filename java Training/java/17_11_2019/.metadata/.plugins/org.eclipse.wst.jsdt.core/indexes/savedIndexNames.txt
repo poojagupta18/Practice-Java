@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Allianz\Desktop\java\17_11_2019\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1200483266.index
+1305999422.index
+3999440787.index
+1975141323.index
+3259373285.index
+2048642422.index

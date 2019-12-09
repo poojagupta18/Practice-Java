@@ -1,0 +1,14 @@
+INDEX VERSION 1.131+C:\Users\Allianz\Desktop\java\14_11_2019\.metadata\.plugins\org.eclipse.jdt.core
+2955490774.index
+2906731984.index
+242883893.index
+2098249222.index
+1686527642.index
+2917536046.index
+2441938283.index
+3367139178.index
+2930068361.index
+647023558.index
+3242072475.index
+3730092277.index
+3934508084.index

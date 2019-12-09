@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Logged In</title>
+</head>
+<body>
+	<center>
+			<form action="TechnicalOneController" method="post">
+			<br> <br>
+			<h1>
+				<font color="darkblue"> Welcome ${employeeName} <br>
+				
+				<a href="EnterCandidateId.jsp">Enter Candidate Id</a>
+				<a href="TechnicalOneController?action=aptitudeSelectedList">Selected List</a>
+	
+		
+		<!-- <input type="submit" value="Aptitude Selected List">
+			 -->
+				</form>
+				
+
+				</font>
+			</h1>
+		<!-- </form> -->
+	</center>
+</body>
+</html>

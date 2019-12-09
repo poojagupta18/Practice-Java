@@ -1,0 +1,20 @@
+package com.dao;
+
+public class UserDAO {
+
+	User save()
+	{
+		boolean status = false;
+		
+		return User;
+	}
+	
+	boolean delete()
+	{
+		boolean status = false;
+		
+		return status;
+	}
+	
+	
+}

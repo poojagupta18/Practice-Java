@@ -1,0 +1,30 @@
+package com.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.dao.UserDAO;
+import com.pojo.User;
+
+class UserDAOTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@Test
+	void testSave() {
+		UserDAO dao = new UserDAO();
+		User user = new User(20, "Atul", "Pune", "999999999");
+		user = dao.save(user);
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDelete() {
+		fail("Not yet implemented");
+	}
+
+}

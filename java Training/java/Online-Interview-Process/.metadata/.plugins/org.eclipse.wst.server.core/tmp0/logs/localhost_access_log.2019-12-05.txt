@@ -1,0 +1,5 @@
+127.0.0.1 - - [05/Dec/2019:19:56:16 -0800] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:19:56:17 -0800] "GET /OnlineInterviewProcessProject/index.jsp HTTP/1.1" 200 406
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:19:56:20 -0800] "GET /OnlineInterviewProcessProject/EmployeeLogin.jsp HTTP/1.1" 200 672
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:19:56:34 -0800] "POST /OnlineInterviewProcessProject/TechnicalOneController?action=employeelogin HTTP/1.1" 200 406
+0:0:0:0:0:0:0:1 - - [05/Dec/2019:19:57:24 -0800] "GET /OnlineInterviewProcessProject/HRAssessment.jsp HTTP/1.1" 200 2449

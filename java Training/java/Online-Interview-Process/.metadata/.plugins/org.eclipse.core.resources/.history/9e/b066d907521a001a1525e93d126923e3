@@ -1,0 +1,15 @@
+package com.interview.dao;
+
+import java.util.List;
+
+import com.interview.pojo.Candidate;
+
+public interface CandidateDao
+{
+	public boolean insertCandidate(Candidate candidate);
+	public boolean deleteCandidate(Integer candidateId);
+	public List<Candidate> getAllCandidates();
+	public Candidate getbyCandidateId(Integer candidateId);
+	public List<Candidate> getAllByMaxMarkCandidates(Double candidateMarks);
+	
+}

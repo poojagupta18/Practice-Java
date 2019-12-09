@@ -1,0 +1,43 @@
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+public class Login {
+
+	public static void main(String[] args) {
+
+		Display display = new Display();
+		Shell shell = new Shell(display);
+		
+		Label label = new Label(shell, SWT.NONE);
+		
+		label.setText("Login Page");
+		label.setBounds(430, 50, 100, 80);
+		
+		Label label1 = new Label(shell, SWT.NONE);
+		
+		label1.setText("Username");
+		label1.setBounds(350, 100, 100, 80);
+		
+		Text username = new Text(shell, SWT.SINGLE | SWT.BORDER);
+		  username.setText("hhhh");
+		  username.setTextLimit(30);
+		  username.setBounds(450, 100,100, 89);
+		  
+		
+		new Text(shell, SWT.BORDER);
+		
+		shell.open();
+		
+		while(!shell.isDisposed())
+		{
+			if(!display.readAndDispatch())
+			{
+				display.sleep();
+			}
+		}	
+	}
+
+}

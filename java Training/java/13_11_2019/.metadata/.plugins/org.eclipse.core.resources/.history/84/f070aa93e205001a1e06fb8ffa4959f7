@@ -1,0 +1,20 @@
+
+public class AbsoluteLayoutExample {
+
+	
+	public AbsoluteLayoutExample(Display display)
+	{
+		initUI(display);
+	}
+	
+	private void initUI(Display display)
+	{
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

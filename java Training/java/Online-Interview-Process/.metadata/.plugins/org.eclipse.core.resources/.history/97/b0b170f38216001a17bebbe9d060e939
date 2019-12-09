@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Registration Form</h1>
+<br>
+<br>
+
+<form action="_______" method="post">
+
+Name: <input type="text" name="studentName">
+Email Id: <input type="text" name="email">
+Mobile Number: <input type="text" name="mobile">
+Marks : <input type="text" name="marks">
+PanCard: <input type="text" name="pancard">
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

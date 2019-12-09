@@ -1,0 +1,11 @@
+import javax.servlet.http.HttpServlet;
+
+public class ExampleHttpServlet extends HttpServlet{
+
+	private String msg;
+	
+	public void init()
+	{
+		msg = "HttpServlet";
+	}
+}

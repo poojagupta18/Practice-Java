@@ -1,0 +1,18 @@
+package com.fileserialization;
+
+import java.io.FileOutputStream;
+
+import com.pojo.Dog;
+
+public class FileOpeartion {
+
+	void serialiazeObject(Dog dog)
+	{
+		FileOutputStream file = new FileOutputStream("DogObject.ser");
+	}
+	
+	void deserizedObject()
+	{
+		
+	}
+}

@@ -1,0 +1,4 @@
+127.0.0.1 - - [26/Nov/2019:21:33:30 -0800] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:21:33:31 -0800] "GET /OnlineShopping/getAllOrderByUserName.jsp HTTP/1.1" 200 473
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:21:34:10 -0800] "GET /OnlineShopping/getAllOrderByUserName.jsp HTTP/1.1" 200 473
+0:0:0:0:0:0:0:1 - - [26/Nov/2019:21:40:08 -0800] "GET /OnlineShopping/getAllOrderByUserName.jsp HTTP/1.1" 200 474

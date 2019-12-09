@@ -1,0 +1,57 @@
+package com.interview.pojo;
+
+public class Assesment {
+	private Integer candidateAssessmentId;
+	private Integer candidateId;
+	private Integer technicalOneId;
+	private Integer technicalTwoId;
+	private Integer hrRoundId ;
+	public Integer getCandidateAssessmentId() {
+		return candidateAssessmentId;
+	}
+	public void setCandidateAssessmentId(Integer candidateAssessmentId) {
+		this.candidateAssessmentId = candidateAssessmentId;
+	}
+	public Integer getCandidateId() {
+		return candidateId;
+	}
+	public void setCandidateId(Integer candidateId) {
+		this.candidateId = candidateId;
+	}
+	public Integer getTechnicalOneId() {
+		return technicalOneId;
+	}
+	public void setTechnicalOneId(Integer technicalOneId) {
+		this.technicalOneId = technicalOneId;
+	}
+	public Integer getTechnicalTwoId() {
+		return technicalTwoId;
+	}
+	public void setTechnicalTwoId(Integer technicalTwoId) {
+		this.technicalTwoId = technicalTwoId;
+	}
+	public Integer getHrRoundId() {
+		return hrRoundId;
+	}
+	public void setHrRoundId(Integer hrRoundId) {
+		this.hrRoundId = hrRoundId;
+	}
+	public Assesment(Integer candidateId, Integer technicalOneId, Integer technicalTwoId, Integer hrRoundId) {
+		super();
+		this.candidateId = candidateId;
+		this.technicalOneId = technicalOneId;
+		this.technicalTwoId = technicalTwoId;
+		this.hrRoundId = hrRoundId;
+	}
+	public Assesment() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "Assesment [candidateAssessmentId=" + candidateAssessmentId + ", candidateId=" + candidateId
+				+ ", technicalOneId=" + technicalOneId + ", technicalTwoId=" + technicalTwoId + ", hrRoundId="
+				+ hrRoundId + "]";
+	}
+   
+	
+}

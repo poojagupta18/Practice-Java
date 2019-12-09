@@ -1,0 +1,22 @@
+package com.apachecamel.example;
+
+import org.apache.camel.ConsumerTemplate;
+import org.apache.camel.ProducerTemplate;
+
+public class CallMethodConsumer {
+
+	
+	//starting the camel context
+	context.start();
+	
+	//producer template
+	ProducerTemplate producerTemplate = context.createProducerTemplate();
+	producerTemplate.sendBody("direct:start", "This msg send by producer");
+	
+	//consumer template
+	ConsumerTemplate consumerTemplate = context.createConsumerTemplate();
+	String msg = consumerTemplate.receiveBody("seda:end", String.class);
+	System.out.println(msg);
+	//stopping the camel context
+	context.stop();
+}

@@ -1,0 +1,21 @@
+import org.eclipse.swt.widgets.Display;
+
+public class AbsoluteLayoutExample {
+
+	
+	public AbsoluteLayoutExample(Display display)
+	{
+		initUI(display);
+	}
+	
+	private void initUI(Display display)
+	{
+		Shell shell = new Shell(display);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

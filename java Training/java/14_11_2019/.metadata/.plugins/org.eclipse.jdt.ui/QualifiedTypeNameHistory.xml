@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.dao.ProductDAO"/>
+<fullyQualifiedTypeName name="com.pojo.Product"/>
+<fullyQualifiedTypeName name="com.dao.UserDAO"/>
+<fullyQualifiedTypeName name="com.pojo.User"/>
+<fullyQualifiedTypeName name="com.opeartion.Calculator"/>
+</qualifiedTypeNameHistroy>

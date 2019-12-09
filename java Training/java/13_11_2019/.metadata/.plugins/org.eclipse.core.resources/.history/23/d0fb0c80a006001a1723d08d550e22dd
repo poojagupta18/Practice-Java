@@ -1,0 +1,14 @@
+package com.crunchify.restjersey;
+
+import javax.ws.rs.Path;
+
+@Path("/ctofservice")
+public class CtoFService {
+
+	@GET
+	@Produces("application/xml")
+	public String convertCtoF()
+	{
+		
+	}
+}

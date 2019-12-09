@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Logged In</title>
+</head>
+<body>
+	<center>
+			<form action="TechnicalOneController" method="post">
+			<c:if
+			<br> <br>
+			<h1>
+				<font color="darkblue"> Welcome ${employeeName} <br>
+				
+				<a href="EnterCandidateId.jsp">Enter Candidate Id</a>
+		
+	
+		
+		<input type="submit" value="Aptitude Selected List">
+			
+				</form>
+				
+
+				</font>
+			</h1>
+		<!-- </form> -->
+	</center>
+</body>
+</html>

@@ -1,0 +1,196 @@
+package com.interview.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.interview.dao.HrRoundDao;
+import com.interview.pojo.Candidate;
+import com.interview.pojo.HrRound;
+import com.interview.utility.DBUtilityConnection;
+
+public class HrRoundDaoImpl implements HrRoundDao {
+
+	@Override
+	public boolean insertHrRoundInformation(HrRound hrRound) {
+
+		boolean status = false;
+		String sql = "INSERT INTO hrround(techincal_two_id, candidate_id, employee_id ,review, remark,status) VALUES(?,?,?,?,?,?)";
+		Connection con = DBUtilityConnection.getConnection();
+		
+		try {
+			PreparedStatement preparedStatement = con.prepareStatement(sql);
+			preparedStatement.setInt(1, hrRound.getTechincalTwoId());
+			preparedStatement.setInt(2, hrRound.getCandidateId());
+			preparedStatement.setInt(3, hrRound.getEmployeeId());
+			preparedStatement.setString(4, hrRound.getReview());
+			preparedStatement.setString(5, hrRound.getRemark());
+			preparedStatement.setString(6, hrRound.getStatus());
+			int result = preparedStatement.executeUpdate();
+			
+			if(result > 0)
+			{
+				System.out.println("Hr round data added successfully...");
+				status = true;
+			}
+			
+			preparedStatement.close();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally
+		{
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	
+		
+		return status;
+	}
+
+	@Override
+	public List<HrRound> getAllHrRoundInformation() {
+
+		List<HrRound> HrRoundInformationList = new ArrayList<HrRound>();
+		HrRound hrRound = null;
+		
+		String sql = "SELECT * From hrround";
+		
+		Connection con = null;
+		
+		try {
+			con = DBUtilityConnection.getConnection();
+			Statement statement = con.createStatement();
+			ResultSet rs = statement.executeQuery(sql);
+			
+			while(rs.next())
+			{
+				hrRound = new HrRound();
+				hrRound.setHrRoundId(rs.getInt("hr_round_id"));
+				hrRound.setCandidateId(rs.getInt("candidate_id"));
+				hrRound.setEmployeeId(rs.getInt("employee_id"));
+				hrRound.setTechincalTwoId(rs.getInt("techincal_two_id"));
+				hrRound.setRemark(rs.getString("review"));
+				hrRound.setReview(rs.getString("remark"));
+				hrRound.setStatus(rs.getString("status"));
+				HrRoundInformationList.add(hrRound);
+			}
+			
+			rs.close();
+			statement.close();
+			return HrRoundInformationList;
+					
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 finally
+			{
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		return null;
+	}
+
+	@Override
+	public HrRound getHrRoundInformationByCandidateId(int candidateId) {
+		List<HrRound> HrRoundInformationList = new ArrayList<HrRound>();
+		HrRound hrRound = null;
+		
+		String sql = "SELECT * FROM hrround WHERE candidate_id=?";
+		
+		Connection con = null;
+		
+		try {
+			con = DBUtilityConnection.getConnection();
+			PreparedStatement preparedStatement = con.prepareStatement(sql);
+			preparedStatement.setInt(1, candidateId);
+			
+			ResultSet rs = preparedStatement.executeQuery();
+			
+			if(rs.next())
+			{
+				hrRound = new HrRound();
+				hrRound.setHrRoundId(rs.getInt("hr_round_id"));
+				hrRound.setCandidateId(rs.getInt("candidate_id"));
+				hrRound.setTechincalTwoId(rs.getInt("techincal_two_id"));
+				hrRound.setEmployeeId(rs.getInt("employee_id"));
+				hrRound.setRemark(rs.getString("review"));
+				hrRound.setReview(rs.getString("remark"));
+				HrRoundInformationList.add(hrRound);
+			}
+			
+			rs.close();
+			preparedStatement.close();
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		 finally
+			{
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			
+		return hrRound;
+	}
+	
+	public List<Candidate> getPassedHrRoundCandidate()
+	{
+		
+		String sql = "SELECT * FROM hrround WHERE status=?";
+		
+		Connection con = null;
+		
+		try {
+			con = DBUtilityConnection.getConnection();
+			PreparedStatement preparedStatement = con.prepareStatement(sql);
+			preparedStatement.setString(1, "pass");
+			
+			ResultSet rs = preparedStatement.executeQuery();
+			
+			if(rs.next())
+			{
+				
+			}
+			
+			rs.close();
+			preparedStatement.close();
+					
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		 finally
+			{
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			
+		
+		
+		return null;
+		
+	}
+
+}

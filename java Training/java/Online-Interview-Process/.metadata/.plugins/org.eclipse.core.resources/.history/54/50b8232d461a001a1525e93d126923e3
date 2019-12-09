@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Logged In</title>
+</head>
+<body>
+	<center>
+		<form action="TechnicalOneController?action=saveCandidateMarks"
+			method="post">
+			<!-- 	<c:if test="${param.action eq 'saveCandidateMarks'}">
+				<input type="hidden" name="action" value="saveCandidateMarks" />
+			</c:if>  -->
+			<br> <br>
+			<h1>
+				<font color="darkblue"> Welcome 
+				<br>
+				<button><a href="EnterCandidateMarks.jsp">Enter Candidate Marks</a></button>
+				<button><a herf="AptitudeSelectedList.jsp">Aptitude Selected List</a></button>
+				
+				</font>
+			</h1>
+
+		</form>
+	</center>
+</body>
+</html>

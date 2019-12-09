@@ -1,0 +1,12 @@
+package com.allianz.shopping.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.allianz.shopping.model.Product;
+
+public interface ProductDaoImpl extends JpaRepository<Product, Integer> {
+
+//	public List<Product> getAllProductByProductCode(String productCode);
+}

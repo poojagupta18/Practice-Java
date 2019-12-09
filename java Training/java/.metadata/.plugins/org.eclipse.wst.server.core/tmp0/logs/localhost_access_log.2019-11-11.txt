@@ -1,0 +1,2 @@
+127.0.0.1 - - [11/Nov/2019:07:45:30 -0800] "POST /FindCategoryClient/services/AnimalTypeService HTTP/1.0" 200 396
+0:0:0:0:0:0:0:1 - - [11/Nov/2019:07:45:30 -0800] "POST /FindCategoryClientClient/sampleAnimalTypeServiceProxy/Result.jsp HTTP/1.1" 200 134

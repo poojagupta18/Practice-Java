@@ -1,0 +1,23 @@
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Shell;
+
+public class Listner {
+
+	Listner()
+	{
+Shell shell = new Shell(display, SWT.SHELL_TRIM | SWT.CENTER);
+		
+		FormLayout layout = new FormLayout();
+		shell.setLayout(layout);
+		
+		Button okBtn = new Button(shell, SWT.PUSH);
+		okBtn.setText("Ok");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
